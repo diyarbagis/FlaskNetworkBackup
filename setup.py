@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='FlaskNetworkBackup',
-    version='1.0',
+    version='1.0.1',
     packages=find_packages(),
     include_package_data=True,
     install_requires=['Flask', 'netmiko'],
@@ -23,12 +23,12 @@ setup(
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Framework :: Flask',
-        'Intended Audience :: Network & Security Engineers',
+        'Intended Audience :: Financial and Insurance Industry',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        'Topic :: Network :: Archiving :: Backup',
+        'Topic :: System :: Networking :: Firewalls',
     ],
 )
