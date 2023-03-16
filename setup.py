@@ -29,6 +29,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
-        'Topic :: Network :: Archiving :: Backup :: Firewall :: Switch :: Router',
+        'Topic :: Network :: Archiving :: Backup',
     ],
 )
