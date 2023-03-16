@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Download Backup</title>
+    <style>
+      /* Header styling */
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 36px;
+      }    
+      body {
+        font-family: Verdana, sans-serif;
+        text-align: center;
+        margin: 0px;
+      }
+      pre {
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      /* Button styling */
+      button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #ff0000;
+      } 
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div style="display:flex;align-items:center;">
+        <img src="{{ url_for('static', filename='images/zedlogo.png') }}" alt="ZEDTech logo" style="height: 50px;">    
+        <div style="display:flex;justify-content:flex-start;">Configuration Backup</div>
+        <div style="display:flex;align-items:center;margin-left:auto;">
+          <button onclick="window.location.href='/add_device'">Add Device</button>
+          <button onclick="window.location.href='/devices'">Device List</button>    
+          <button onclick="window.location.href='/backups'">Backup List</button>        
+        </div>
+      </div>
+    </header>
+    <h2>Download Backup</h2>
+    <pre>{{ config }}</pre>
+    <br>
+    <button onclick="window.location.href='/download/{{ id }}'">Download</button>
+  </body>
+</html>

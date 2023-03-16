@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup List</title>
+    <style>
+      /* Body styling */
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+      }
+
+      /* Header styling */
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 36px;
+      }
+
+      /* Table styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        margin: 20px auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      th {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: left;
+        font-size: 18px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td {
+        padding: 10px;
+        font-size: 16px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td:first-child {
+        font-weight: bold;
+      }
+
+      td:last-child {
+        text-align: center;
+      }
+
+      /* Add a hover effect on the table rows */
+      tr:hover {
+      background-color: #f5f5f5;
+      }
+
+      /* Button styling */
+      button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+      background-color: #ff0000;
+      }
+      
+      input[type="submit"] {
+        background-color: #333;
+        color: white;
+        padding: 2px 4px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; 
+      }    
+      input[type="submit"]:hover {
+        background-color: #ff0000;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+    <div style="display:flex;align-items:center;">
+      <img src="{{ url_for('static', filename='images/zedlogo.png') }}" alt="ZEDTech logo" style="height: 50px;">    
+    <div style="display:flex;justify-content:flex-start;">Backup List</div>
+    <div style="display:flex;align-items:center;margin-left:auto;">
+    <button onclick="window.location.href='/add_device'">Add Device</button>
+    <button onclick="window.location.href='/devices'">Device List</button>    
+  </div>
+    </header>
+    <!-- Search bar -->
+    <div style="display:flex;justify-content:flex-end;margin-right:5px;">
+     <form action="{{ url_for('backups') }}" method="GET">
+      <input type="text" name="search_query" placeholder="Search...">
+      <input type="submit" value="Search">
+     </form>
+    </div>    
+    <!-- Table -->
+    <table>
+      <tr>
+        <th>No</th>
+        <th>Device Type</th>
+        <th>IP Address</th>
+        <th>Hostname</th>
+        <th>Date Added</th>
+        <th></th>
+      </tr>
+      {% for row in backups %}
+        <tr>
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2] }}</td>
+          <td>{{ row[8] }}</td>
+          <td>{{ row[7] }}</td>
+          <td>
+            <button onclick="window.location.href='/backups/{{ row[0] }}'">Show Backup</button>
+            <button onclick="window.location.href='/backups/delete/{{ row[0] }}'">Delete Backup</button>
+            <button onclick="window.location.href='/backups/download/{{ row[0] }}'">Download Backup</button>
+            <button onclick="window.location.href='/send_email/{{ row[0] }}'">Send Email</button>
+
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

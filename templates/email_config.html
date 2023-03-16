@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <title>ZEDTech Network Backup - Email Configuration</title>
+    <style>
+      body {
+        font-family: Verdana, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      /* Header styling */
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 36px;
+      }
+      form {
+        display: inline-block;
+        text-align: left;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      label {
+        font-weight: normal;
+        margin-right: 10px;
+      }
+      input[type="text"], input[type="email"], select {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      input[type="password"], select {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; 
+      }    
+      input[type="submit"]:hover {
+        background-color: #ff0000;
+      }
+      input[type="number"] {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        width: 100%;
+      } 
+      .copyleft {
+      display:inline-block;
+      transform: rotate(180deg);
+      }   
+      
+      /* Button styling */
+      button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #ff0000;
+      }      
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+    <div style="display:flex;align-items:center;">
+      <img src="{{ url_for('static', filename='images/zedlogo.png') }}" alt="ZEDTech logo" style="height: 50px;">    
+    <div style="display:flex;justify-content:flex-start;">Network Backup</div>
+    <div style="display:flex;align-items:center;margin-left:auto;">
+    <button onclick="window.location.href='/add_device'">Add Device</button>
+    <button onclick="window.location.href='/devices'">Device List</button>
+    <button onclick="window.location.href='/backups'">Backup List</button>    
+  </div>
+    </header>
+    
+    <h2>Email Configuration</h2>
+
+    <form action="/email_config" method="post">
+      <label for="username">Email Username:</label>
+      <input type="email" id="username" name="username" required>
+      <br>
+      <label for="password">Email Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <label for="smtp_server">SMTP Server:</label>
+      <input type="text" id="smtp_server" name="smtp_server" required>
+      <br>
+      <label for="smtp_port">SMTP Port:</label>
+      <input type="number" id="smtp_port" name="smtp_port" required>
+      <br>
+      <label for="sender_email">From Email Address:</label>
+      <input type="email" id="sender_email" name="sender_email" required>
+      <br>
+      <label for="rcv_email">To Email Address:</label>
+      <input type="email" id="rcv_email" name="rcv_email" required>
+      <br>            
+      <input type="submit" value="Save Configuration">
+      </form>
+
+   <footer>
+      <p>Zed Teknoloji <span class="copyleft">&copy;</span> 2023 </p>
+   </footer>
+  </body>
+</html>

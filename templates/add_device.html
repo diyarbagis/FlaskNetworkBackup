@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>ZEDTech Network Backup</title>
+    <style>
+      body {
+        font-family: Verdana, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      /* Header styling */
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 36px;
+      }
+      form {
+        display: inline-block;
+        text-align: left;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      label {
+        font-weight: normal;
+        margin-right: 10px;
+      }
+      input[type="text"], select {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      input[type="password"], select {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        width: 100%;
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; 
+      }    
+      input[type="submit"]:hover {
+        background-color: #ff0000;
+      }
+      
+      /* Button styling */
+      button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+      background-color: #ff0000;
+      }  
+      .copyleft {
+      display:inline-block;
+      transform: rotate(180deg);
+      }   
+
+     
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+    <div style="display:flex;align-items:center;">
+      <img src="{{ url_for('static', filename='images/zedlogo.png') }}" alt="ZEDTech logo" style="height: 50px;">    
+    <div style="display:flex;justify-content:flex-start;">Network Backup</div>
+    <div style="display:flex;align-items:center;margin-left:auto;">
+    <button onclick="window.location.href='/devices'">Device List</button>
+    <button onclick="window.location.href='/backups'">Backup List</button>    
+    <button onclick="window.location.href='/email_config'">Email Settings</button>    
+    
+  </div>
+    </header>
+    
+    <h2>Get Backup/Add Device</h2>
+
+    <form action="/add_device" method="post">
+      <label for="ip_address">IP Address:</label>
+      <input type="text" id="ip_address" name="ip_address" required>
+      <br>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <label for="enable_password">Enable Password(if reqired):</label>
+      <input type="password" id="enable_password" name="enable_password">
+      <br>
+      <label for="device_type">Device Type:</label>
+      <select id="device_type" name="device_type" required>
+        <option value="fortinet">Fortinet</option>  
+        <option value="paloalto_panos">Palo Alto</option>   
+        <option value="cisco_ios">Cisco IOS</option>       
+        <option value="aruba_os">Aruba</option>
+        <option value="dell_force10">Dell Force10</option>
+        <option value="brocade_icx">Brocade ICX</option>
+        <option value="ruijie">Ruijie</option>
+        <option value="juniper">Juniper</option>
+        <option value="huawei">Huawei</option>        
+      </select>
+      <br>
+      <input type="submit" value="Backup Configuration">
+    </form>
+   <footer>
+      <p>Zed Teknoloji <span class="copyleft">&copy;</span> 2023 </p>
+   </footer>
+  </body>
+</html>
+
