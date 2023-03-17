@@ -50,7 +50,7 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-> Make sure to replace <your_username> with your actual username, and /path/to/file/location with the path file.
+> Make sure to replace <your_username> with your actual username, and /path/to/file/location with the path to file.
 
 
 `$ sudo systemctl daemon-reload`
