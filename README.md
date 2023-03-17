@@ -2,6 +2,7 @@
 A free open-source Flask app for backup on switches,routers and firewalls. 
 
 ## Features
+*  Getting backup from Fortinet, Palo Alto, Cisco, Aruba, Dell Force10, Brocade ICX, Ruijie, Juniper, Huawei devices 
 *  Creating a .cfg file and email the file as an attachment
 *  Easy-to-use web interface
 *  Add your device once and backup without re-enter again 
