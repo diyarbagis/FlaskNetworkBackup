@@ -24,6 +24,7 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 *  Creating a .cfg file and email the file as an attachment
 *  Easy-to-use web interface
 *  Add your device once and backup without re-enter again 
+*  Store your email configuration, login data, backups on SQLite
 *  Download configuration backup as cfg file 
 *  Search devices and backups
 
