@@ -7,10 +7,10 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 #### Configure your smtp settings and get email with your backup attached.
 ![email_config](https://user-images.githubusercontent.com/50266008/225598935-bcd58e77-bfba-4d4c-b17c-bb1e419f8037.jpg)
 
-### List your devices
+#### List your devices
 ![devices](https://user-images.githubusercontent.com/50266008/225598964-20e7d82b-8755-4339-b4b2-205b6731a63d.jpg)
 
-### List your backups
+#### List your backups
 ![backups](https://user-images.githubusercontent.com/50266008/225598984-ad6ec638-0f9a-428f-8e73-324ce2b5ea8b.jpg)
 
 #### Show Backup
