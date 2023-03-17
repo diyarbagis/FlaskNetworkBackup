@@ -31,3 +31,4 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 * $ git clone https://github.com/diyarbagis/FlaskNetworkBackup.git
 * $ cd FlaskNetworkBackup
 * $ python3 NetBackup.py 
+* Open 127.0.0.1:5000 on your browser and get your backup.
