@@ -11,9 +11,12 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 *  Search devices and backups
 
 ## Prerequisites
-* git ->
+> git 
+
 `$ sudo apt install git`
-* pip ->
+
+> pip 
+ 
 `$ sudo apt install python3-pip`
 
 ## Usage
