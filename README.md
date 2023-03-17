@@ -25,7 +25,7 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 
 `$ python3 fnetbackup.py`
 
-:rocket: **Open 0.0.0.0:6565 on your browser and get your backup.**
+:rocket: **Open http://0.0.0.0:6565 on your browser and get your backup.**
 
 ## If you want to run the app as a service
 #### Follow these instructions
@@ -56,7 +56,7 @@ WantedBy=multi-user.target
 
 `$ sudo systemctl start fnetbackup`
 
-:rocket: **0.0.0.0:6565 ready for you!**
+:rocket: **http://0.0.0.0:6565 ready for you!**
 
 **check status**
 
