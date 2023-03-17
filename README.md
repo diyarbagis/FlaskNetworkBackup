@@ -30,9 +30,9 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 
 ## Prerequisites
 * git
-- sudo apt install git
+->sudo apt install git
 * pip
-- sudo apt install python3-pip
+-> sudo apt install python3-pip
 
 ## Usage
 * $ git clone https://github.com/diyarbagis/FlaskNetworkBackup.git
