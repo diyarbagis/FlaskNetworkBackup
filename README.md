@@ -10,21 +10,25 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 *  Search devices and backups
 
 ## Prerequisites
-* git
-->sudo apt install git
-* pip
--> sudo apt install python3-pip
+* git ->
+`$ sudo apt install git`
+* pip ->
+`$ sudo apt install python3-pip`
 
 ## Usage
-* $ git clone https://github.com/diyarbagis/FlaskNetworkBackup.git
-* $ cd FlaskNetworkBackup
-* $ pip install -r requirements.txt
-* $ python3 fnetbackup.py 
-* Open 0.0.0.0:6565 on your browser and get your backup.
+`$ git clone https://github.com/diyarbagis/FlaskNetworkBackup.git`
+
+`$ cd FlaskNetworkBackup`
+
+`$ pip install -r requirements.txt`
+
+`$ python3 fnetbackup.py`
+
+:rocket: **Open 0.0.0.0:6565 on your browser and get your backup.**
 
 ## If you want to run as a service
 #### Follow these instructions
-* $ sudo nano /etc/systemd/system/fnetbackup.service
+`$ sudo nano /etc/systemd/system/fnetbackup.service `
 
 ```bash
 [Unit]
@@ -42,11 +46,20 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-* $ sudo systemctl daemon-reload
-* $ sudo systemctl enable fnetbackup
-* $ sudo systemctl start fnetbackup
+> Make sure to replace <your_username> with your actual username, and /path/to/file/location with the path file.
 
-* Open 0.0.0.0:6565 on your browser and get your backup.
+
+`$ sudo systemctl daemon-reload`
+
+`$ sudo systemctl enable fnetbackup`
+
+`$ sudo systemctl start fnetbackup`
+
+:rocket: **0.0.0.0:6565 ready for you!**
+
+**check status**
+
+`$ sudo systemctl status fnetbackup`
 
 ## Screenshots
 
