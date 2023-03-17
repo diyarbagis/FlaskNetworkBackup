@@ -5,7 +5,7 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 ![add_device](https://user-images.githubusercontent.com/50266008/225598408-8636ef90-2af8-44fd-ae75-356b20aee5a4.jpg)
 
 #### Configure your smtp settings and get email with your backup attached.
-![email_config](https://user-images.githubusercontent.com/50266008/225598935-bcd58e77-bfba-4d4c-b17c-bb1e419f8037.jpg)
+![email_config](https://user-images.githubusercontent.com/50266008/225902193-872921ef-010c-4d5b-8783-7fb42f2c263f.jpg)
 
 #### List your devices
 ![devices](https://user-images.githubusercontent.com/50266008/225598964-20e7d82b-8755-4339-b4b2-205b6731a63d.jpg)
@@ -32,3 +32,6 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 * $ cd FlaskNetworkBackup
 * $ python3 NetBackup.py 
 * Open 127.0.0.1:5000 on your browser and get your backup.
+
+
+
