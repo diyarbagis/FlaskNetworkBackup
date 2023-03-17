@@ -28,6 +28,6 @@ A free open-source Flask app for backup on switches,routers and firewalls.
 *  Search devices and backups
 
 ## Usage
-* git clone https://github.com/diyarbagis/FlaskNetworkBackup.git
-* cd FlaskNetworkBackup
-* python3 NetBackup.py 
+* $ git clone https://github.com/diyarbagis/FlaskNetworkBackup.git
+* $ cd FlaskNetworkBackup
+* $ python3 NetBackup.py 
